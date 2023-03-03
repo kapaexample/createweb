@@ -38,9 +38,18 @@ let postCRUD =async(req, res) => {
     console.log(message);
     return res.send('post crud from server');
 }
+let displayGetCRUD = async (req, res) => {
+    let data = await CRUDService.getAllUser();
+    console.log('------------------------------------------------');
+    console.log(data);
+    console.log('------------------------------------------------');
+
+    return res.send('get crud from controller');
+}
 module.exports = {
     gethomePage: gethomePage,
     getaboutPage: getaboutPage,
     getcrudPage: getcrudPage,
     postCRUD: postCRUD,
+    displayGetCRUD:displayGetCRUD,
 }

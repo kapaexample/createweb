@@ -9,6 +9,8 @@ let initWebRoutes = (app) => {
     router.get('/about', controllerPage.getaboutPage);
     router.get('/crud', controllerPage.getcrudPage);
     router.post('/post-crud', controllerPage.postCRUD);
+    router.get('/get-crud', controllerPage.displayGetCRUD);
+
     return app.use('/',router);
 }
 module.exports = initWebRoutes;
